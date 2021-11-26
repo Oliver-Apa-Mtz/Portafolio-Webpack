@@ -1,0 +1,31 @@
+{
+  "name": "portafolio-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --mode=development",
+    "start": "http-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oliver-Apa-Mtz/Portafolio-Webpack.git"
+  },
+  "author": "oliver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oliver-Apa-Mtz/Portafolio-Webpack/issues"
+  },
+  "homepage": "https://github.com/Oliver-Apa-Mtz/Portafolio-Webpack#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "http-server": "^14.0.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "workbox-webpack-plugin": "^6.4.1"
+  }
+}

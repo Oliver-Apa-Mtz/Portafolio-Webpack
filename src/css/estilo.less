@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    overflow: hidden;
+    &-ppal{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        transform: rotate(-10deg);
+        scale: 1.4;
+        &__item{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            &--one{
+                top: 0;
+                left: 0;
+                &::before{
+                    background-color: #6B76FF;
+                }
+                &::after{
+                    font-family: 'Righteous', cursive;
+                    position: absolute;
+                    content: "Web Developer";
+                    font-size: 60px;
+                    color: #112031;
+                    bottom: -12px;
+                    right: 5px;
+                    z-index: 10;
+                }
+            }
+            &--two{
+                top: 0;
+                right: 0;
+                &::before{
+                    background-color: #C7FFD8;
+                }
+            }
+            &--three{
+                bottom: 0;
+                left: 0;
+                &::before{
+                    background-color: #98DED9;
+                }
+            }
+            &--four{
+                bottom: 0;
+                right: 0;
+                &::before{
+                    background-color: #503BFF;
+                }
+                &::after{
+                    font-family: 'Righteous', cursive;
+                    position: absolute;
+                    content: "Frontend";
+                    font-size: 60px;
+                    color: #112031;
+                    top: -14px;
+                    left: 0px;
+                    z-index: 10;
+                }
+            }
+            img{
+                width: 100%;
+                opacity: .5;
+            }
+            &::before{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                content: "";
+                transition: all .3s;
+                z-index: 10;
+            }
+            &:hover{
+                &::before{
+                    background-color: transparent;
+                }
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1200px){
+    .banner-ppal__item{
+        &--one{
+            &::after{
+                font-size: 30px;
+                bottom: -5px;
+                right: 4px;
+            }
+        }
+        &--four{
+            bottom: 0;
+            right: 0;
+            &::before{
+                background-color: #503BFF;
+            }
+            &::after{
+                font-size: 30px;
+                top: -7px;
+            }
+        }
+    }
+}
+@media(max-width: 600px){
+    .banner-ppal{
+        transform: rotate(0deg);
+        scale: 1;
+       &__item{
+            width: 100%;
+            &--one{
+                &::after{
+                    left: 5px;
+                }
+            }
+            &--two{
+                display: none;
+            }
+            &--three{
+                display: none;
+            }
+            &--four{
+                &::after{
+                    left: unset;
+                    right: 5px;
+                }
+            }
+       }
+    }
+}
